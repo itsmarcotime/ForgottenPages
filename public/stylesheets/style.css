@@ -39,6 +39,7 @@ nav ul {
 nav ul li {
 	margin: 5px;
 }
+
 .dashboard {
 	display: flex;
 	flex-direction: row;
