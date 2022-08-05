@@ -90,3 +90,7 @@ textarea {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+
+nav ul li a:hover {
+    background-color: #E97827;
+}
