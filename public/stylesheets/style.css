@@ -53,6 +53,7 @@ nav ul li a:hover {
 .dashboard {
 	display: flex;
 	flex-direction: row;
+    flex-wrap: wrap;
 	justify-content: space-around;
 	color: #946416;
 	font-size: 1.25em;
@@ -64,6 +65,12 @@ nav ul li a:hover {
 	display: flex;
 	margin-top: 60px;
 	padding: 30px;
+    width: auto;
+    overflow: hidden;
+}
+
+.login-form {
+    width: auto;
 }
 
 form label {
@@ -99,6 +106,19 @@ textarea {
 	background-image: url(../images/paperscrap.png);
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+
+.btn {
+    padding: 4px;
+    font-family: "Calligraffitti", cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5px;
+    color:black;
+    width: 160px;
+    background-image: url(../images/button2.jpg);
+    text-align: left;
 }
 
 
