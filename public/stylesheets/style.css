@@ -40,6 +40,16 @@ nav ul li {
 	margin: 5px;
 }
 
+nav ul li a {
+    color: black ;
+    text-decoration: none;
+
+}
+
+nav ul li a:hover {
+    color: #dfc78b;
+}
+
 .dashboard {
 	display: flex;
 	flex-direction: row;
@@ -91,6 +101,4 @@ textarea {
 	background-repeat: no-repeat;
 }
 
-nav ul li a:hover {
-    background-color: #E97827;
-}
+
