@@ -62,11 +62,12 @@ nav ul li a:hover {
 
 .search {
     margin-top: 40px;
-    
+    height: 286px;
+	width: 224px;
 }
 /* Sign in and up */
 
-.signbox {
+.signBox {
 	margin-top: 50px;
 	padding: 30px;
     height: 286px;
@@ -82,10 +83,10 @@ form label {
 
 textarea,
 input {
-	background-color: none;
+	background-color: transparent;
 	padding: 0.5%;
 	border-radius: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #946416;
     max-width: fit-content;
 }
 
