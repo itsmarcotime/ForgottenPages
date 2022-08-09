@@ -48,10 +48,11 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #dfc78b;
+	text-decoration: underline;
 }
 
 .dashboard {
-	display: flex;
+	display: inline-block;
 	flex-direction: row;
     flex-wrap: wrap;
 	justify-content: space-around;
@@ -131,3 +132,52 @@ textarea {
     margin-top: 50px;
 }
 
+/* dashboard */
+.holdingBox{
+	display: flex;
+		width: 80%;
+		margin: 30px;
+		border: 6px double #946416;
+		background-color: #dfc78b;
+		background-image: url(../images/paper.jpg);
+		background-size: cover;
+		background-position: 50%;
+}
+.characterBox {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: bold;
+	color:black;
+}
+table p {
+	
+	text-decoration: none;
+}
+table span {
+	text-decoration: underline;
+}
+.picture {
+	display: flex;
+	padding-left: 1px;
+}
+
+.picture img{
+	height: 100px;
+	width: 100px;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.container2 {
+	display: block
+}
+
+.section2 {
+	display: flex;
+	justify-content: space-around;
+}
