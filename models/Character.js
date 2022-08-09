@@ -16,7 +16,7 @@ Character.init(
         },
         picture: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: true
         },
         age: {
             type: DataTypes.INTEGER,
