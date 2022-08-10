@@ -43,13 +43,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black ;
-    text-decoration: none;
-
+	color: black;
+	text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #dfc78b;
+	color: #dfc78b;
 	text-decoration: underline;
 }
 .dashboard {
@@ -63,8 +62,8 @@ label {
 }
 
 .search {
-    margin-top: 40px;
-    height: 286px;
+	margin-top: 40px;
+	height: 286px;
 	width: 224px;
 }
 
@@ -72,11 +71,11 @@ label {
 
 .pictureBox {
 	margin-top: 50px;
-    height: 300px;
+	height: 300px;
 }
 
 .login-form {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .pictureBox form label {
@@ -89,13 +88,12 @@ input {
 	padding: 0.5%;
 	border-radius: 5px;
 	border: 1px solid #946416;
-    
 }
 
 textarea:focus,
 input:focus {
 	outline: none;
-	border: 1px solid #946416;
+	border: 1px solid #781802;
 }
 
 textarea {
@@ -107,28 +105,28 @@ textarea {
 	background-image: url(../images/paperscrap.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-    padding:25px;
+	padding: 25px;
 }
 
-
 .btn {
-    padding: 4px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    color:black;
-    width: 160px;
-    background-image: url(../images/button2.jpg);
-    text-align: left;
+	padding: 4px;
+	font-size: 1.1em;
+	border-radius: 5px;
+	color: black;
+	width: 160px;
+	background-image: url(../images/button2.jpg);
+	text-align: left;
 	margin-top: 20px;
 }
 
-.b1{
+.b1 {
 	margin-top: 70px;
 }
 
 /* dashboard */
 
-.characterBox, .holdingBox {
+.characterBox,
+.holdingBox {
 	width: 100%;
 	border: 6px double #946416;
 	background-color: #dfc78b;
@@ -136,12 +134,10 @@ textarea {
 	background-size: cover;
 	background-position: 50%;
 	font-weight: bold;
-	color:black;
-	
+	color: black;
 }
 
 table p {
-	
 	text-decoration: none;
 }
 p span {
@@ -153,13 +149,12 @@ p span {
 	justify-content: center;
 }
 
-.picture img{
+.picture img {
 	height: 100px;
 	width: 100px;
 }
 
 .info {
-	
 	justify-content: space-around;
 	width: 100%;
 }
@@ -167,7 +162,6 @@ p span {
 .borderBox {
 	border: 4px double #946416;
 	min-height: 50px;
-	
 }
 
 .circle {
@@ -176,29 +170,84 @@ p span {
 	width: 90px;
 	height: 90px;
 	text-align: center;
-	margin:2px;
-    
+	margin: 2px;
+
 	padding-top: 5px;
-	font-size:1.5em
+	font-size: 1.5em;
 }
 .killBorder {
-	border:none;
+	border: none;
 }
 
 .addChar {
 	overflow: hidden;
-	font-size: .95em;
-	
+	font-size: 0.95em;
 }
 .dashboard div div div input {
-	width: 100%
+	width: 100%;
 }
 .skills div div input {
 	max-width: 25px;
 }
 .wide input {
- width: 100%;
+	width: 100%;
 }
 .skills div {
-	margin: 2px auto
+	margin: 2px auto;
 }
+
+/* 404 not found */
+
+.hvr-icon-spin {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-icon-spin .hvr-icon {
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+}
+.hvr-icon-spin:hover .hvr-icon,
+.hvr-icon-spin:focus .hvr-icon,
+.hvr-icon-spin:active .hvr-icon {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+.dice {
+	background-color: black;
+	width: 100px;
+	height: 55px;
+	border-radius: 10px;
+	padding-top: 5px;
+	border: 4px double #763203;
+	color: #763203
+}
+
+
+/* Sign out */
+
+.btn-no-style {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+	font-size: 100%;
+	font-weight: bold;
+	transition: color 0.1s;
+	
+  }
+  
+  .btn-no-style:hover {
+	
+	color: #dfc78b;
+  }

@@ -25,7 +25,12 @@ router.get('/', (req, res) => {
             ],
       
         })
-        .then(dbCharacterData => res.json(dbCharacterData))
+        .then((dbCharacterData) => {
+            const characters = dbCharacterData.map((character) => character.get({ plain: true }));
+            res.json("dashboard", {characters, 
+                //loggedIn: true 
+            })
+        })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
