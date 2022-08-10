@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const {User, Character} = require('../models');
 
-// Need to make an add Character route that renders the add-character page
+router.get('/', (req, res) => {
+    res.render("homepage")
+})
+
+
 
 module.exports = router;
