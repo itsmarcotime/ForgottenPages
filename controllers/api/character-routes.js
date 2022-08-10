@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
 
 //this will create a character
 router.post('/', (req, res) => {
-        
+
         Character.create({
             name: req.body.name,
             picture: req.body.picture,
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
             personality_traits: req.body.personality_traits,
             ideals: req.body.ideals,
             flaws: req.body.flaws,
-            //use id from session
+
             user_id: req.body.user_id
         })
         .then(dbCharacterData => res.json(dbCharacterData))
@@ -79,7 +79,7 @@ router.put('/:id', (req, res) => {
             background: req.body.background,
             personality_traits: req.body.personality_traits,
             ideals: req.body.ideals,
-            flaws: req.body.flaws,
+            flaws: req.body.flaws
         },
         {
             where: {
