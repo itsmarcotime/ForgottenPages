@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Add character</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="stylesheets/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>The Forgotten Pages</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Dashboard</a>
+					</li>
+					<li>
+						<a href="#">Add Character</a>
+					</li>
+					<li>
+						<a href="#">Sign in</a>
+					</li>
+					<li>
+						<p>Username</p>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+		<main>
+			<form class="addChar">
+			<section class="container characterBox justify-content-center dashboard">
+				<div class="row ">
+					<div class="col-12 col-sm-2">
+						<div class="col picture">
+						<img src="https://onlinedm.files.wordpress.com/2010/12/dryad.png" />
+						</div>
+					<!-- <div class="form">WEBADRESS</div> -->
+					</div>
+					<div class="col-12 col-sm-10">
+						<div class="row">
+							<div class="col-6 col-sm-3">
+								<label for="name">Name:</label> <br><input type="text" id="name" name="name">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="age">Age:</label> <br><input type="text" id="age" name="age">
+									
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="height">Height:</label> <br><input type="text" id="height" name="height">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="race">Race:</label> <br><input type="text" id="race" name="race">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="alignment">Alignment:</label> <br><input type="text" id="alignment" name="alignment">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="class">Class:</label><br> <input type="text" id="class" name="class">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="occupation">Occupation:</label> <br><input type="text" id="occupation" name="occupation">
+							</div>
+							<div class="col-6 col-sm-3">
+								<label for="level">Level:</label> <br><input type="text" id="level" name="level">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row eyesHair mb-2">
+					<div class="col-sm-2 col-xs-12 mt-2 wide">
+						<label for="link">Img Link:</label> <input type="text" id="link" name="link">
+					</div>
+					<div class="col-sm-5 col-xs-12 wide"><label for="eyes">Eyes:</label> <br><input type="text" id="eyes" name="eyes" ></div>
+					<br><br>
+					<div class="col-sm-5 col-xs-12 wide"><label for="hair">Hair:</label><br><input type="text" id="hair" name="hair"></div>
+				</div>
+			</section>
+
+			<section class="container col-sm-12 characterBox mt-2 killBorder">
+				<div class="row">
+					<div class="col-sm-3 col-xs-4 borderBox skills">
+						<div class="row">
+							<div class="col-sm-6 col-xs-6 circle"><label for="str">Str:</label> <input type="text" id="str" name="str"> </div>
+							<div class="col-sm-6 col-xs-6 circle"><label for="dex">Dex:</label> <input type="text" id="dex" name="dex"> </div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-xs-6 circle"><label for="const">Const:</label> <input type="text" id="const" name="const"></div>
+							<div class="col-sm-6 col-xs-6 circle"><label for="int">Int:</label> <input type="text" id="int" name="int"></div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 col-xs-6 circle"><label for="wis">Wis:</label> <input type="text" id="wis" name="wis"></div>
+							<div class="col-sm-6 col-xs-6 circle"><label for="char">Char:</label> <input type="text" id="char" name="char"></div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-12 borderBox"><label for="relationships">Relationships</label>
+						<br><textarea id="relationships" name="relationships" rows="5" cols="40"></textarea>
+						</div>
+					<div class="col-sm-3 col-xs-12 borderBox"><label for="background">Background</label>
+						<br><textarea id="background" name="background" rows="5" cols="40"></textarea></div>
+					<div class="col-sm-3 col-xs-12 ">
+						<div class="row ">
+							<div class="col-12 borderBox"><label for="personality">Personality</label>
+								<br><textarea id="personality" name="personality" rows="5" cols="40"></textarea></div>
+						</div>
+						<div class="row ">
+							<div class="col-12 borderBox"><label for="ideals">Ideals</label>
+								<br><textarea id="ideals" name="ideals" rows="5" cols="40"></textarea></div>
+						</div>
+						<div class="row">
+							<div class="col-12 borderBox"><label for="flaws">Flaws</label>
+								<br><textarea id="flaws" name="flaws" rows="5" cols="40"></textarea></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</form>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	</body>
+</html>
