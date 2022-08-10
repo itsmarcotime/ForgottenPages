@@ -31,7 +31,7 @@ router.get('/:id', (req, res) => {
 
 //this will create a character
 router.post('/', (req, res) => {
-    if (req.session) {
+        
         Character.create({
             name: req.body.name,
             picture: req.body.picture,
@@ -50,14 +50,14 @@ router.post('/', (req, res) => {
             ideals: req.body.ideals,
             flaws: req.body.flaws,
             //use id from session
-            user_id: req.session.user_id
+            user_id: req.body.user_id
         })
         .then(dbCharacterData => res.json(dbCharacterData))
         .catch(err => {
             console.log(err);
             res.status(400).json(err);
         });
-    }
+    
 });
 
 //this will update a charater
