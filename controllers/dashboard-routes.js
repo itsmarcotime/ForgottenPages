@@ -14,6 +14,7 @@ router.get("/", (req, res) => {
 			"alignment",
 			"age",
 			"height",
+			"occupation",
 			"level",
 		],
 		include: [
@@ -48,6 +49,7 @@ router.get("/characters/:id", (req, res) => {
             "height",
             "weight",
             "race",
+			"occupation",
             "alignment",
             "class_name",
             "level",
@@ -109,6 +111,7 @@ router.get("/characters/edit/:id", (req, res) => {
             "alignment",
             "class_name",
             "level",
+			"occupation",
             "hair",
             "eyes",
             "str",

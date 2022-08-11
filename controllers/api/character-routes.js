@@ -45,6 +45,7 @@ router.get('/:id', (req, res) => {
             "race",
             "alignment",
             "class_name",
+            "occupation",
             "level",
             "hair",
             "eyes",
