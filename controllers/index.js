@@ -9,6 +9,8 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/', homeRoutes);
 
 
-router.use((req,res)=> {res.status(404).end()});
+router.use((req,res,next)=> {res.status(404).render("404")});
+
+
 
 module.exports = router;
