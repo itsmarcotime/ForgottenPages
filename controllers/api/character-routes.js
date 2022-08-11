@@ -101,7 +101,7 @@ router.post('/', (req, res) => {
             ideals: req.body.ideals,
             flaws: req.body.flaws,
 
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         })
         .then(dbCharacterData =>{
             console.log(dbCharacterData);

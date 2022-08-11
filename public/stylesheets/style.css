@@ -168,7 +168,11 @@ p span {
 
 .borderBox {
 	border: 4px double #946416;
-	min-height: 50px;
+	min-height: 120px;
+}
+
+.short {
+	max-height:50px;
 }
 
 .circle {
@@ -178,12 +182,13 @@ p span {
 	height: 90px;
 	text-align: center;
 	margin: 2px;
-
+	
 	padding-top: 5px;
 	font-size: 1.5em;
 }
 .killBorder {
 	border: none;
+	font-weight: bold;
 }
 
 .addChar {

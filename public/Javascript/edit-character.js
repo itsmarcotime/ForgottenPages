@@ -13,9 +13,15 @@ async function editFormHandler(event) {
 	const occupation = document.querySelector('input[name="occupation"]').value;	
 	const hair = document.querySelector('input[name="hair"]').value.trim();
 	const eyes = document.querySelector('input[name="eyes"]').value.trim();
+	const str = document.querySelector('input[name="str"]').value.trim();
+	const dex = document.querySelector('input[name="dex"]').value.trim();
+	const con = document.querySelector('input[name="con"]').value.trim();
+	const wis = document.querySelector('input[name="wis"]').value.trim();
+	const int = document.querySelector('input[name="int"]').value.trim();
+	const char = document.querySelector('input[name="char"]').value.trim();
 	const relationships = document.querySelector('input[name="relationships"]').value.trim();
 	const background = document.querySelector('input[name="background"]').value.trim();
-	const personality_traits = document.querySelector('input[name="personality"]').value.trim();
+	const personality_traits = document.querySelector('input[name="personality_traits"]').value.trim();
 	const ideals = document.querySelector('input[name="ideals"]').value.trim();
 	const flaws = document.querySelector('input[name="flaws"]').value.trim();
 	const id = window.location.toString().split("/")[
@@ -36,6 +42,12 @@ async function editFormHandler(event) {
             hair,
             eyes,
 			occupation,
+			str,
+            dex,
+            con,
+            wis,
+            int,
+            char,
             relationships,
             background,
             personality_traits,
@@ -55,5 +67,5 @@ async function editFormHandler(event) {
 }
 
 document
-	.querySelector(".edit-post-form")
+	.querySelector(".editChar")
 	.addEventListener("submit", editFormHandler);
