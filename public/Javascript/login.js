@@ -21,6 +21,7 @@ async function loginFormHandler(event) {
         //this will check response status
         if (response.ok) {
             console.log('success');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
@@ -29,7 +30,7 @@ async function loginFormHandler(event) {
 
 async function signupFormHandler(event) {
     event.preventDefault();
-
+   console.log(connect.sid)
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -45,8 +46,9 @@ async function signupFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         });
 
-        if (response.ok) {
+        if (response.ok) { 
             console.log('success');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }

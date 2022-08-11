@@ -4,7 +4,7 @@ const {User, Character} = require('../models');
 router.get('/', (req, res) => {
     Character.findAll({
         where: {
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         },
             attributes: [
                 'id',
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         .then((dbCharacterData) => {
             const characters = dbCharacterData.map((character) => character.get({ plain: true }));
             res.json("dashboard", {characters, 
-                //loggedIn: true 
+                loggedIn: true 
             })
         })
     .catch(err => {
