@@ -39,9 +39,9 @@
 					<li>
 						<a href="/">Home</a>
 					</li>
-                   
+                   {{#if loggedIn}}
 					<li>
-						<a href="#">Dashboard</a>
+						<a href="/dashboard">Dashboard</a>
 					</li>
 					<li>
 						<a href="/add-character">Add Character</a>
@@ -49,13 +49,14 @@
                     <li>
 						<button id="signOut" class="btn-no-style">Sign Out</button>
 					</li>
-                    
+                    {{else}}
 					<li>
-						<a href="#">Sign in</a>
+						<a href="/">Sign in</a>
 					</li>
+					{{/if}}
 					
 					<li>
-						<p>Username</p>
+						<p>{{username}}</p>
 					</li>
 					
 				</ul>
@@ -71,8 +72,9 @@
 			{{{ body }}}
 		</main>
         
+	{{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-	
+	{{/if}}
 	
     
 

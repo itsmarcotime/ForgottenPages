@@ -1,9 +1,9 @@
     {{#if characters.length}}
-<section class="container dashboard characterBox justify-content-center">
+<section class="container ">
     <ul>
         {{#each characters as |character|}}
-        <li>
-            <a href="/dashboard/character/{{character.id}}"> {{> character character}}</a>
+        <li class="dashboard characterBox justify-content-center mb-2">
+            <a href="/dashboard/characters/{{character.id}}"> {{> character character}}</a>
         </li>
         {{/each}}
     </ul>

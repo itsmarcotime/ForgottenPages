@@ -3,14 +3,14 @@ const { User, Character } = require("../models");
 
 router.get("/", (req, res) => {
 	Character.findAll({
-		// where: {
-		// 	user_id: req.session.user_id,
-		// },
+		where: {
+			user_id: req.session.user_id,
+		},
 		attributes: [
 			"id",
 			"name",
 			"race",
-			"class",
+			"class_name",
 			"alignment",
 			"age",
 			"height",
@@ -35,7 +35,7 @@ router.get("/", (req, res) => {
 		});
 });
 
-router.get("/edit/:id", (req, res) => {
+router.get("/characters/:id", (req, res) => {
 	Character.findOne({
 		where: {
 			id: req.params.id,
@@ -43,12 +43,28 @@ router.get("/edit/:id", (req, res) => {
 		attributes: [
 			"id",
 			"name",
-			"race",
-			"class",
-			"alignment",
-			"age",
-			"height",
-			"level",
+            "picture",
+            "age",
+            "height",
+            "weight",
+            "race",
+            "alignment",
+            "class_name",
+            "level",
+            "hair",
+            "eyes",
+            "str",
+            "dex",
+            "con",
+            "wis",
+            "int",
+            "char",
+            "relationships",
+            "background",
+            "personality_traits",
+            "ideals",
+            "flaws",
+			
 		],
 		include: [
 			{
@@ -56,26 +72,83 @@ router.get("/edit/:id", (req, res) => {
 				attributes: ["username"],
 			},
 		],
-	}).then((dbCharacterData) => res.json(dbCharacterData));
+	})
+		.then((dbCharacterData) => {
+			if (!dbCharacterData) {
+				res.status(404).json({ message: "No Character found with this id" });
+				return;
+			}
 
-	if (!dbCharacterData) {
-		res.status(404).json({
-			message: "No character found with this id",
+			// serialize the data
+			const character = dbCharacterData.get({ plain: true });
+
+			// pass data to template
+			res.render("single-character", {
+				character,
+				loggedIn: req.session.loggedIn,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+			res.status(500).json(err);
 		});
-		return;
-	}
-	const post = dbCharacterData.get({
-		plain: true,
-	});
-
-	res.render("edit-post", {
-		post,
-		loggedIn: true,
-	});
 });
 
-router.get("/view-character", (req, res) => {
-	res.render("single-character");
-});
+router.get("/characters/edit/:id", (req, res) => {
+	Character.findOne({
+		where: {
+			id: req.params.id,
+		},
+		attributes: [
+			"name",
+            "picture",
+            "age",
+            "height",
+            "weight",
+            "race",
+            "alignment",
+            "class_name",
+            "level",
+            "hair",
+            "eyes",
+            "str",
+            "dex",
+            "con",
+            "wis",
+            "int",
+            "char",
+            "relationships",
+            "background",
+            "personality_traits",
+            "ideals",
+            "flaws",
+		],
+		include: [
+			{
+				model: User,
+				attributes: ["username"],
+			},
+		],
+	}).then((dbCharacterData) => {
+		if (!dbCharacterData) {
+			res.status(404).json({ message: "No Character found with this id" });
+			return;
+		}
 
+		// serialize the data
+		const character = dbCharacterData.get({ plain: true });
+
+		// pass data to template
+		res.render("edit-Character", {
+			character,
+			loggedIn: true,
+		});
+	})
+	.catch((err) => {
+		console.log(err);
+		res.status(500).json(err);
+	});
+})
+
+	
 module.exports = router;

@@ -6,6 +6,12 @@
 							<input type="text" id="search-user" />
 						</div>
 					</div>
+                    {{#if loggedIn}}
+                    <div class="col-sm-4 d-flex justify-content-center">
+						<p>Welcome to Forgotten Pages! Feel free to look around!</p>
+							
+					</div>
+                        {{else}}
 					<div class="col-sm-4 d-flex justify-content-center">
 						<div class="pictureBox signIn">
 							<form class="login-form">
@@ -44,6 +50,10 @@
 							</form>
 						</div>
 					</div>
+                    {{/if}}
 				</div>
 			</section>
+            {{#if loggedIn}}
+            {{else}}
             <script src="/javascript/login.js"></script>
+            {{/if}}

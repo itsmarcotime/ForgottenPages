@@ -23,12 +23,12 @@ Character.init(
             allowNull: true
         },
         height: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true
 
         },
         weight: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true  
         },
         race: {
@@ -39,12 +39,16 @@ Character.init(
             type: DataTypes.STRING,
             allowNull: true
         },
-        class: {
+        class_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
         level: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        occupation: {
+            type: DataTypes.STRING,
             allowNull: true
         },
         hair: {
@@ -53,6 +57,30 @@ Character.init(
         },
         eyes: {
             type: DataTypes.STRING,
+            allowNull: true
+        },
+        str: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        dex: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        con: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        int: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        wis: {
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        char: {
+            type: DataTypes.INTEGER,
             allowNull: true
         },
         relationships: {

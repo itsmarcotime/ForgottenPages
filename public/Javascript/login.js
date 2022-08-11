@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-
+        
         //this will check response status
         if (response.ok) {
             console.log('success');
@@ -30,7 +30,6 @@ async function loginFormHandler(event) {
 
 async function signupFormHandler(event) {
     event.preventDefault();
-   console.log(connect.sid)
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();

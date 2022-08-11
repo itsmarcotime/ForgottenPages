@@ -137,9 +137,20 @@ textarea {
 	color: black;
 }
 
-table p {
+.characterBox a {
 	text-decoration: none;
+	color:black;
+
 }
+.characterBox a:hover {
+	text-decoration: none;
+	color:black;
+	
+}
+ul {
+	list-style-type: none;
+}
+
 p span {
 	text-decoration: underline;
 }
@@ -154,10 +165,6 @@ p span {
 	width: 100px;
 }
 
-.info {
-	justify-content: space-around;
-	width: 100%;
-}
 
 .borderBox {
 	border: 4px double #946416;
