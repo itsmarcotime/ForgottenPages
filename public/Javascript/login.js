@@ -1,6 +1,3 @@
-//when login.handlebars exists link this script using "<script src="/javascript/login.js"></script>"
-
-//*still require a fetch for search username*
 
 async function loginFormHandler(event) {
     event.preventDefault();
