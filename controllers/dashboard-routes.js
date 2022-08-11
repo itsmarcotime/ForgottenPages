@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User, Character } = require("../models");
-
-router.get("/", (req, res) => {
+const withAuth = require('../utils/auth');
+router.get("/", withAuth, (req, res) => {
 	Character.findAll({
 		where: {
 			user_id: req.session.user_id,
