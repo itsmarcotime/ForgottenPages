@@ -2,7 +2,7 @@ async function editFormHandler(event) {
 	event.preventDefault();
 
 	const name = document.querySelector('input[name="name"]').value.trim();
-	const picture = document.querySelector('textarea[name="picture"]').value.trim();
+	const picture = document.querySelector('input[name="picture"]').value.trim();
 	const age = document.querySelector('input[name="age"]').value.trim();
     const height = document.querySelector('input[name="height"]').value.trim();
 	const weight = document.querySelector('input[name="weight"]').value.trim();
@@ -19,15 +19,15 @@ async function editFormHandler(event) {
 	const wis = document.querySelector('input[name="wis"]').value.trim();
 	const int = document.querySelector('input[name="int"]').value.trim();
 	const char = document.querySelector('input[name="char"]').value.trim();
-	const relationships = document.querySelector('input[name="relationships"]').value.trim();
-	const background = document.querySelector('input[name="background"]').value.trim();
-	const personality_traits = document.querySelector('input[name="personality_traits"]').value.trim();
-	const ideals = document.querySelector('input[name="ideals"]').value.trim();
-	const flaws = document.querySelector('input[name="flaws"]').value.trim();
+	const relationships = document.querySelector('textarea[name="relationships"]').value.trim();
+	const background = document.querySelector('textarea[name="background"]').value.trim();
+	const personality_traits = document.querySelector('textarea[name="personality_traits"]').value.trim();
+	const ideals = document.querySelector('textarea[name="ideals"]').value.trim();
+	const flaws = document.querySelector('textarea[name="flaws"]').value.trim();
 	const id = window.location.toString().split("/")[
 		window.location.toString().split("/").length - 1
 	];
-	const response = await fetch(`/api/posts/${id}`, {
+	const response = await fetch(`/api/characters/${id}`, {
 		method: "PUT",
 		body: JSON.stringify({
 			name,

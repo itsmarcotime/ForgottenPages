@@ -172,7 +172,8 @@ p span {
 }
 
 .short {
-	max-height:50px;
+	border: 4px double #946416;
+	height: 70px;
 }
 
 .circle {

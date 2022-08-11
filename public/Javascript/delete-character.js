@@ -4,7 +4,7 @@ async function deleteFormHandler(event) {
 	const id = window.location.toString().split("/")[
 		window.location.toString().split("/").length - 1
 	];
-	const response = await fetch(`/api/posts/${id}`, {
+	const response = await fetch(`/api/characters/${id}`, {
 		method: "DELETE",
 	});
 
@@ -16,5 +16,5 @@ async function deleteFormHandler(event) {
 }
 
 document
-	.querySelector(".delete-post-btn")
+	.querySelector(".delete-character-btn")
 	.addEventListener("click", deleteFormHandler);
